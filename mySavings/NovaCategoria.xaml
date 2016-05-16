@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="mySavings.NovaCategoria"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:mySavings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Adicionar categoria" FontSize="25" TextAlignment="Center" Grid.Column="0"/>
+            <AppBarButton x:Name="cancelarCategoria" Icon="Cancel" Width="50" Height="50" Grid.Column="1" Click="cancelarCategoria_Click"/>
+        </Grid>
+        <StackPanel Margin="0,100,0,0" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Tipo: " FontSize="20"/>
+                <ComboBox x:Name="newTipo" Width="300" Margin="21,0,0,0">
+                    <ComboBoxItem Content="Receita"/>
+                    <ComboBoxItem Content="Despesa"/>
+                    <ComboBoxItem Content="Transferência"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Nome: " FontSize="20"/>
+                <TextBox x:Name="newNome" Width="300" Margin="61,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <AppBarButton x:Name="salvarCategoria" Icon="Accept" Width="50" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="salvarCategoria_Click"/>
+    </Grid>
+</Page>

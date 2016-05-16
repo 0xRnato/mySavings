@@ -119,6 +119,15 @@
     <Compile Include="Moedas.xaml.cs">
       <DependentUpon>Moedas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NovaCategoria.xaml.cs">
+      <DependentUpon>NovaCategoria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NovaConta.xaml.cs">
+      <DependentUpon>NovaConta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NovaTransacao.xaml.cs">
+      <DependentUpon>NovaTransacao.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Planejamentos.xaml.cs">
       <DependentUpon>Planejamentos.xaml</DependentUpon>
     </Compile>
@@ -188,6 +197,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Moedas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NovaCategoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NovaConta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NovaTransacao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

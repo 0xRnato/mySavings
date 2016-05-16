@@ -18,11 +18,40 @@ using Windows.UI.Xaml.Navigation;
 
 namespace mySavings
 {
+    struct Transacao
+    {
+        public Categoria categoria;
+        public float valor;
+        public string detalhes;
+        public DateTime data;
+        public Conta conta;
+        public Conta contaO;
+        public Conta contaD;
+    }
+
+    struct Conta
+    {
+        public string nome;
+        public float saldo;
+    }
+
+    struct Categoria
+    {
+        public string tipo;
+        public string nome;
+    }
+
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
     {
+        //Variaveis Globais
+        internal static List<Transacao> transacoes;
+        internal static List<Conta> contas;
+        internal static List<Categoria> categorias;
+        internal static ComboBox newCategoria;
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -45,6 +74,11 @@ namespace mySavings
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            //Inicialização das variaveis globais
+            contas = new List<Conta>();
+            transacoes = new List<Transacao>();
+            categorias = new List<Categoria>();
+
             // Do not repeat app initialization when the Window already has content,
             // Just ensure that the window is active
             if (Window.Current.Content == null)
@@ -91,6 +125,7 @@ namespace mySavings
             {
                 e.Handled = true;
                 _rootFrame.GoBack();
+                
             }
         }
 
