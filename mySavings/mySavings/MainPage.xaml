@@ -1,0 +1,134 @@
+﻿<Page
+    x:Class="mySavings.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:mySavings"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:Name="navPane" DisplayMode="CompactOverlay" OpenPaneLength="150" CompactPaneLength="50">
+            <SplitView.Pane>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="Click_OpenPane" FontSize="20"/>
+                        <TextBlock Text="Menu" VerticalAlignment="Center" FontSize="20"/>
+                    </StackPanel>
+                    <ListView x:Name="menu" SelectedIndex="0" SelectionChanged="menu_SelectionChanged">
+                        <!--Contas-->
+                        <ListViewItem x:Name="menu_Contas" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Contas_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock VerticalAlignment="Center" Text="Contas" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Transações-->
+                        <ListViewItem x:Name="menu_Transacoes" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Transacoes_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock VerticalAlignment="Center" Text="Transações" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Categorias-->
+                        <ListViewItem x:Name="menu_Categorias" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Categorias_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock VerticalAlignment="Center" Text="Categorias" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Planejamentos-->
+                        <ListViewItem x:Name="menu_Planejamentos" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Planejamentos_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Planejamentos" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Tendências-->
+                        <ListViewItem x:Name="menu_Tendencias" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Tendencias_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Tendências" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Moedas-->
+                        <ListViewItem x:Name="menu_Moedas" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Moedas_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Moedas" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Calculadora-->
+                        <ListViewItem x:Name="menu_Calculadora" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Calculadora_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Calculadora" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Ajuda-->
+                        <ListViewItem x:Name="menu_Ajuda" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Ajuda_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Ajuda" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Configurações-->
+                        <ListViewItem x:Name="menu_Configurações" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Configuracoes_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Configurações" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                        <!--Sobre-->
+                        <ListViewItem x:Name="menu_Sobre" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="Assets/Icons/Sobre_Icon.png" Height="25" Grid.Column="0"/>
+                                <TextBlock Text="Sobre" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+    </Grid>
+</Page>
