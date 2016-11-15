@@ -1,2 +1,2 @@
 # mySavings
-My first application using the universal windows platform (UWP) to control my savings
+Meu primeiro sistema feito para controlar minhas economias, com um prototipo em Aplicação de Console e o projeto principal em Plataforma Universal do Windows.
